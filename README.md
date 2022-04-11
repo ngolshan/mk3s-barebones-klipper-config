@@ -12,10 +12,10 @@ A bare-minimum Klipper config to get a stock Prusa MK3S(+) running on Klipper fi
 
 SSH into your Pi, and run the following commands:
 
-    'cd ~/klipper_config' *(change directory to klipper's config directory)*
-    'git clone https://github.com/ngolshan/mk3s-barebones-klipper-config.git .' *(note the '.' at the end of the command - this is important)*
+    cd ~/klipper_config
+    git clone https://github.com/ngolshan/mk3s-barebones-klipper-config.git .
 
-You should now see the 'printer.cfg' file and the '/cfg/...' subfolders in the current '~/klipper_config' directory.
+You should now see the `printer.cfg` file and the `/cfg/...` subfolders in the current `~/klipper_config` directory.
 
 
 ### Printer Setup and Initialization
@@ -28,7 +28,22 @@ You should now see the 'printer.cfg' file and the '/cfg/...' subfolders in the c
  * **IMPORTANT:** Use [`PROBE_CALIBRATE`](https://www.klipper3d.org/Probe_Calibrate.html#calibrating-probe-z-offset) to calibrate your base probe offset (the z-offset from the probe trigger point to the actual tip of the nozzle) so you don't crash your nozzle/damage the bed. Do not assume the current value in this config matches your printer.
  * Check and calibrate [`rotation_distance`](https://www.klipper3d.org/Rotation_Distance.html) if you want, but I found it to be close enough for my stock MK3S+ Bondtech drive gears that I didn't bother.
 
-
+ ### Slicer Setup
+ 
+ In your slicer of choice, make sure the following is called in the "start gcode" section: 
+ `PRINT_START EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature]`
+ 
+ As well as the following in the "end gcode" section:
+ `PRINT_END`
+ 
+ 
  ### Klipper Config Reference
 
  [Klipper Configuration Reference Docs](https://www.klipper3d.org/Config_Reference.html)
+ 
+ 
+ 
+ ### Credits
+ 
+* Large parts of this config are based on the [Universal Prusa Config](https://github.com/Prutsium/3D-Druckerplausch-Klipper) by Pinky#1302 on the 602 Wasteland Discord.
+* Various macros adapted from other users of the [602 Wasteland Discord Server](https://discord.gg/hYUjSnW).
