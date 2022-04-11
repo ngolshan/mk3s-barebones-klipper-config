@@ -12,10 +12,10 @@ A bare-minimum Klipper config to get a stock Prusa MK3S(+) running on Klipper fi
 
 SSH into your Pi, and run the following commands:
 
-    'cd ~/klipper_config' *(change directory to klipper's config directory)*
-    'git clone https://github.com/ngolshan/mk3s-barebones-klipper-config.git .' *(note the '.' at the end of the command - this is important)*
+    cd ~/klipper_config
+    git clone https://github.com/ngolshan/mk3s-barebones-klipper-config.git .
 
-You should now see the 'printer.cfg' file and the '/cfg/...' subfolders in the current '~/klipper_config' directory.
+You should now see the `printer.cfg` file and the `/cfg/...` subfolders in the current `~/klipper_config` directory.
 
 
 ### Printer Setup and Initialization
