@@ -32,3 +32,10 @@ You should now see the `printer.cfg` file and the `/cfg/...` subfolders in the c
  ### Klipper Config Reference
 
  [Klipper Configuration Reference Docs](https://www.klipper3d.org/Config_Reference.html)
+ 
+ 
+ 
+ ### Credits
+ 
+* Large parts of this config are based on the [Universal Prusa Config](https://github.com/Prutsium/3D-Druckerplausch-Klipper) by Pinky#1302 on the 602 Wasteland Discord.
+* Various macros adapted from other users of the [602 Wasteland Discord Server](https://discord.gg/hYUjSnW).
