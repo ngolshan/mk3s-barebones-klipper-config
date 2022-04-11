@@ -28,7 +28,15 @@ You should now see the `printer.cfg` file and the `/cfg/...` subfolders in the c
  * **IMPORTANT:** Use [`PROBE_CALIBRATE`](https://www.klipper3d.org/Probe_Calibrate.html#calibrating-probe-z-offset) to calibrate your base probe offset (the z-offset from the probe trigger point to the actual tip of the nozzle) so you don't crash your nozzle/damage the bed. Do not assume the current value in this config matches your printer.
  * Check and calibrate [`rotation_distance`](https://www.klipper3d.org/Rotation_Distance.html) if you want, but I found it to be close enough for my stock MK3S+ Bondtech drive gears that I didn't bother.
 
-
+ ### Slicer Setup
+ 
+ In your slicer of choice, make sure the following is called in the "start gcode" section: 
+ `PRINT_START EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature]`
+ 
+ As well as the following in the "end gcode" section:
+ `PRINT_END`
+ 
+ 
  ### Klipper Config Reference
 
  [Klipper Configuration Reference Docs](https://www.klipper3d.org/Config_Reference.html)
